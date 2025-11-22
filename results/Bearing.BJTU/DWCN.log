@@ -1,0 +1,219 @@
+11-22 14:15:48
+dataset_name: Bearing.BJTU
+source_id: 1200
+data_ratio: 0.5
+miss_class: []
+FFT: False
+normalize_type: mean-std
+model_name: DWCN
+batch_size: 64
+lr: 0.01
+epoch: 100
+operation_num: 1
+num_class: 5
+Train_Source: 1200 | Test_Target: 1210-2400-2410-3600-3610
+Num-0, Epoch: 0 Loss_c: 0.1680, Loss_1: 0.2360, Loss_2: -0.0368, Time 0.4716 sec
+Soure_domain_acc: 33.04, Target_domain_acc: 29.36
+Num-0, Epoch: 1 Loss_c: 0.1033, Loss_1: 0.1264, Loss_2: -0.0601, Time 0.1274 sec
+Soure_domain_acc: 83.26, Target_domain_acc: 76.68
+Num-0, Epoch: 2 Loss_c: 0.0432, Loss_1: 0.0620, Loss_2: -0.0908, Time 0.1273 sec
+Soure_domain_acc: 87.28, Target_domain_acc: 75.08
+Num-0, Epoch: 3 Loss_c: 0.0175, Loss_1: 0.0355, Loss_2: -0.1294, Time 0.1201 sec
+Soure_domain_acc: 96.21, Target_domain_acc: 89.20
+Num-0, Epoch: 4 Loss_c: 0.0068, Loss_1: 0.0212, Loss_2: -0.1737, Time 0.1286 sec
+Soure_domain_acc: 99.55, Target_domain_acc: 86.40
+Num-0, Epoch: 5 Loss_c: 0.0040, Loss_1: 0.0165, Loss_2: -0.2264, Time 0.1290 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.24
+Num-0, Epoch: 6 Loss_c: 0.0029, Loss_1: 0.0164, Loss_2: -0.2832, Time 0.1249 sec
+Soure_domain_acc: 98.88, Target_domain_acc: 88.72
+Num-0, Epoch: 7 Loss_c: 0.0023, Loss_1: 0.0136, Loss_2: -0.3853, Time 0.1181 sec
+Soure_domain_acc: 98.66, Target_domain_acc: 88.16
+Num-0, Epoch: 8 Loss_c: 0.0020, Loss_1: 0.0124, Loss_2: -0.4800, Time 0.1283 sec
+Soure_domain_acc: 98.88, Target_domain_acc: 85.92
+Num-0, Epoch: 9 Loss_c: 0.0014, Loss_1: 0.0120, Loss_2: -0.5939, Time 0.1271 sec
+Soure_domain_acc: 99.55, Target_domain_acc: 91.28
+Num-0, Epoch: 10 Loss_c: 0.0014, Loss_1: 0.0100, Loss_2: -0.7368, Time 0.1277 sec
+Soure_domain_acc: 99.55, Target_domain_acc: 91.96
+Num-0, Epoch: 11 Loss_c: 0.0011, Loss_1: 0.0090, Loss_2: -0.9113, Time 0.1351 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 86.88
+Num-0, Epoch: 12 Loss_c: 0.0009, Loss_1: 0.0077, Loss_2: -1.0360, Time 0.1323 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 91.20
+Num-0, Epoch: 13 Loss_c: 0.0010, Loss_1: 0.0076, Loss_2: -1.2075, Time 0.1310 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 89.68
+Num-0, Epoch: 14 Loss_c: 0.0014, Loss_1: 0.0111, Loss_2: -1.5297, Time 0.1303 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 92.44
+Num-0, Epoch: 15 Loss_c: 0.0011, Loss_1: 0.0098, Loss_2: -1.5668, Time 0.1263 sec
+Soure_domain_acc: 98.88, Target_domain_acc: 89.24
+Num-0, Epoch: 16 Loss_c: 0.0009, Loss_1: 0.0087, Loss_2: -1.9046, Time 0.1251 sec
+Soure_domain_acc: 98.88, Target_domain_acc: 88.32
+Num-0, Epoch: 17 Loss_c: 0.0009, Loss_1: 0.0083, Loss_2: -2.1355, Time 0.1259 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 92.44
+Num-0, Epoch: 18 Loss_c: 0.0008, Loss_1: 0.0078, Loss_2: -2.4652, Time 0.1350 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 89.48
+Num-0, Epoch: 19 Loss_c: 0.0007, Loss_1: 0.0074, Loss_2: -2.7768, Time 0.1354 sec
+Soure_domain_acc: 99.78, Target_domain_acc: 92.28
+Num-0, Epoch: 20 Loss_c: 0.0007, Loss_1: 0.0079, Loss_2: -2.9704, Time 0.1332 sec
+Soure_domain_acc: 98.88, Target_domain_acc: 89.48
+Num-0, Epoch: 21 Loss_c: 0.0009, Loss_1: 0.0084, Loss_2: -3.4093, Time 0.1415 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 89.32
+Num-0, Epoch: 22 Loss_c: 0.0007, Loss_1: 0.0073, Loss_2: -3.6588, Time 0.1344 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 91.96
+Num-0, Epoch: 23 Loss_c: 0.0005, Loss_1: 0.0052, Loss_2: -4.1076, Time 0.1278 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 91.92
+Num-0, Epoch: 24 Loss_c: 0.0005, Loss_1: 0.0051, Loss_2: -4.2043, Time 0.1250 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 89.80
+Num-0, Epoch: 25 Loss_c: 0.0004, Loss_1: 0.0046, Loss_2: -4.8539, Time 0.1269 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.00
+Num-0, Epoch: 26 Loss_c: 0.0003, Loss_1: 0.0044, Loss_2: -5.1826, Time 0.1200 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 92.84
+Num-0, Epoch: 27 Loss_c: 0.0003, Loss_1: 0.0047, Loss_2: -5.9895, Time 0.1217 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 90.40
+Num-0, Epoch: 28 Loss_c: 0.0005, Loss_1: 0.0050, Loss_2: -6.0669, Time 0.1271 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 90.72
+Num-0, Epoch: 29 Loss_c: 0.0003, Loss_1: 0.0047, Loss_2: -6.8510, Time 0.1240 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 90.24
+Num-0, Epoch: 30 Loss_c: 0.0003, Loss_1: 0.0048, Loss_2: -6.8801, Time 0.1335 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 89.64
+Num-0, Epoch: 31 Loss_c: 0.0006, Loss_1: 0.0079, Loss_2: -8.1687, Time 0.1305 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.44
+Num-0, Epoch: 32 Loss_c: 0.0007, Loss_1: 0.0085, Loss_2: -8.5252, Time 0.1236 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 88.88
+Num-0, Epoch: 33 Loss_c: 0.0005, Loss_1: 0.0077, Loss_2: -8.7029, Time 0.1300 sec
+Soure_domain_acc: 99.55, Target_domain_acc: 92.16
+Num-0, Epoch: 34 Loss_c: 0.0006, Loss_1: 0.0071, Loss_2: -8.9882, Time 0.1444 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 93.08
+Num-0, Epoch: 35 Loss_c: 0.0005, Loss_1: 0.0059, Loss_2: -9.8972, Time 0.1267 sec
+Soure_domain_acc: 99.55, Target_domain_acc: 91.48
+Num-0, Epoch: 36 Loss_c: 0.0004, Loss_1: 0.0052, Loss_2: -10.4166, Time 0.1297 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 88.12
+Num-0, Epoch: 37 Loss_c: 0.0006, Loss_1: 0.0049, Loss_2: -10.8809, Time 0.1209 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 91.16
+Num-0, Epoch: 38 Loss_c: 0.0005, Loss_1: 0.0043, Loss_2: -11.9548, Time 0.1228 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 92.16
+Num-0, Epoch: 39 Loss_c: 0.0008, Loss_1: 0.0050, Loss_2: -12.4975, Time 0.1383 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 88.40
+Num-0, Epoch: 40 Loss_c: 0.0007, Loss_1: 0.0059, Loss_2: -13.8322, Time 0.1242 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 90.56
+Num-0, Epoch: 41 Loss_c: 0.0007, Loss_1: 0.0068, Loss_2: -14.3636, Time 0.1209 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 93.28
+Num-0, Epoch: 42 Loss_c: 0.0005, Loss_1: 0.0063, Loss_2: -15.0969, Time 0.1271 sec
+Soure_domain_acc: 100.00, Target_domain_acc: 91.12
+Num-0, Epoch: 43 Loss_c: 0.0005, Loss_1: 0.0064, Loss_2: -15.4952, Time 0.1268 sec
+Soure_domain_acc: 100.00, Target_domain_acc: 92.88
+Num-0, Epoch: 44 Loss_c: 0.0002, Loss_1: 0.0059, Loss_2: -15.8239, Time 0.1275 sec
+Soure_domain_acc: 98.66, Target_domain_acc: 88.88
+Num-0, Epoch: 45 Loss_c: 0.0002, Loss_1: 0.0049, Loss_2: -17.4547, Time 0.1269 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.40
+Num-0, Epoch: 46 Loss_c: 0.0001, Loss_1: 0.0048, Loss_2: -17.6778, Time 0.1314 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.36
+Num-0, Epoch: 47 Loss_c: 0.0003, Loss_1: 0.0046, Loss_2: -17.2893, Time 0.1278 sec
+Soure_domain_acc: 99.55, Target_domain_acc: 91.48
+Num-0, Epoch: 48 Loss_c: 0.0001, Loss_1: 0.0040, Loss_2: -19.9781, Time 0.1398 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 91.16
+Num-0, Epoch: 49 Loss_c: 0.0001, Loss_1: 0.0039, Loss_2: -19.2739, Time 0.1215 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 90.96
+Num-0, Epoch: 50 Loss_c: 0.0003, Loss_1: 0.0051, Loss_2: -21.2496, Time 0.1408 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.16
+Num-0, Epoch: 51 Loss_c: 0.0002, Loss_1: 0.0048, Loss_2: -21.4980, Time 0.1300 sec
+Soure_domain_acc: 99.55, Target_domain_acc: 91.64
+Num-0, Epoch: 52 Loss_c: 0.0003, Loss_1: 0.0051, Loss_2: -22.9736, Time 0.1279 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 92.88
+Num-0, Epoch: 53 Loss_c: 0.0002, Loss_1: 0.0047, Loss_2: -24.1410, Time 0.1252 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 90.88
+Num-0, Epoch: 54 Loss_c: 0.0003, Loss_1: 0.0045, Loss_2: -25.8972, Time 0.1288 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 89.88
+Num-0, Epoch: 55 Loss_c: 0.0002, Loss_1: 0.0042, Loss_2: -26.2529, Time 0.1252 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 90.76
+Num-0, Epoch: 56 Loss_c: 0.0002, Loss_1: 0.0041, Loss_2: -28.1395, Time 0.1317 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 91.20
+Num-0, Epoch: 57 Loss_c: 0.0002, Loss_1: 0.0039, Loss_2: -28.2387, Time 0.1254 sec
+Soure_domain_acc: 99.55, Target_domain_acc: 92.00
+Num-0, Epoch: 58 Loss_c: 0.0002, Loss_1: 0.0033, Loss_2: -30.9097, Time 0.1295 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 88.40
+Num-0, Epoch: 59 Loss_c: 0.0003, Loss_1: 0.0030, Loss_2: -29.3806, Time 0.1245 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 90.92
+Num-0, Epoch: 60 Loss_c: 0.0001, Loss_1: 0.0031, Loss_2: -30.0987, Time 0.1253 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 92.48
+Num-0, Epoch: 61 Loss_c: 0.0001, Loss_1: 0.0027, Loss_2: -31.7138, Time 0.1295 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 90.96
+Num-0, Epoch: 62 Loss_c: 0.0001, Loss_1: 0.0027, Loss_2: -33.1046, Time 0.1228 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 92.00
+Num-0, Epoch: 63 Loss_c: 0.0001, Loss_1: 0.0031, Loss_2: -33.6370, Time 0.1227 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 90.76
+Num-0, Epoch: 64 Loss_c: 0.0001, Loss_1: 0.0029, Loss_2: -37.3366, Time 0.1241 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 90.20
+Num-0, Epoch: 65 Loss_c: 0.0001, Loss_1: 0.0026, Loss_2: -34.2013, Time 0.1266 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 89.52
+Num-0, Epoch: 66 Loss_c: 0.0002, Loss_1: 0.0035, Loss_2: -39.4470, Time 0.1293 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.40
+Num-0, Epoch: 67 Loss_c: 0.0001, Loss_1: 0.0031, Loss_2: -40.3029, Time 0.1270 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.92
+Num-0, Epoch: 68 Loss_c: 0.0001, Loss_1: 0.0027, Loss_2: -39.2376, Time 0.1287 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 91.44
+Num-0, Epoch: 69 Loss_c: 0.0001, Loss_1: 0.0035, Loss_2: -43.6876, Time 0.1223 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.16
+Num-0, Epoch: 70 Loss_c: 0.0001, Loss_1: 0.0030, Loss_2: -43.5861, Time 0.1239 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.40
+Num-0, Epoch: 71 Loss_c: 0.0001, Loss_1: 0.0034, Loss_2: -46.7667, Time 0.1250 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.16
+Num-0, Epoch: 72 Loss_c: 0.0005, Loss_1: 0.0067, Loss_2: -47.0246, Time 0.1224 sec
+Soure_domain_acc: 98.88, Target_domain_acc: 93.68
+Num-0, Epoch: 73 Loss_c: 0.0002, Loss_1: 0.0077, Loss_2: -46.5262, Time 0.1227 sec
+Soure_domain_acc: 98.88, Target_domain_acc: 85.76
+Num-0, Epoch: 74 Loss_c: 0.0009, Loss_1: 0.0137, Loss_2: -52.3465, Time 0.1248 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 92.40
+Num-0, Epoch: 75 Loss_c: 0.0021, Loss_1: 0.0171, Loss_2: -47.3005, Time 0.1347 sec
+Soure_domain_acc: 99.55, Target_domain_acc: 93.60
+Num-0, Epoch: 76 Loss_c: 0.0068, Loss_1: 0.0224, Loss_2: -51.4784, Time 0.1337 sec
+Soure_domain_acc: 99.78, Target_domain_acc: 93.40
+Num-0, Epoch: 77 Loss_c: 0.0054, Loss_1: 0.0172, Loss_2: -57.8878, Time 0.1287 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 93.68
+Num-0, Epoch: 78 Loss_c: 0.0015, Loss_1: 0.0129, Loss_2: -54.4197, Time 0.1278 sec
+Soure_domain_acc: 94.64, Target_domain_acc: 82.20
+Num-0, Epoch: 79 Loss_c: 0.0012, Loss_1: 0.0117, Loss_2: -54.5988, Time 0.1267 sec
+Soure_domain_acc: 98.44, Target_domain_acc: 86.44
+Num-0, Epoch: 80 Loss_c: 0.0013, Loss_1: 0.0086, Loss_2: -58.0735, Time 0.1294 sec
+Soure_domain_acc: 96.43, Target_domain_acc: 83.92
+Num-0, Epoch: 81 Loss_c: 0.0027, Loss_1: 0.0096, Loss_2: -58.5296, Time 0.1270 sec
+Soure_domain_acc: 97.77, Target_domain_acc: 84.80
+Num-0, Epoch: 82 Loss_c: 0.0004, Loss_1: 0.0070, Loss_2: -59.9659, Time 0.1233 sec
+Soure_domain_acc: 98.88, Target_domain_acc: 91.40
+Num-0, Epoch: 83 Loss_c: 0.0004, Loss_1: 0.0058, Loss_2: -60.9268, Time 0.1512 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 92.64
+Num-0, Epoch: 84 Loss_c: 0.0001, Loss_1: 0.0038, Loss_2: -62.4092, Time 0.1251 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 89.72
+Num-0, Epoch: 85 Loss_c: 0.0002, Loss_1: 0.0036, Loss_2: -62.7275, Time 0.1215 sec
+Soure_domain_acc: 98.44, Target_domain_acc: 86.88
+Num-0, Epoch: 86 Loss_c: 0.0001, Loss_1: 0.0032, Loss_2: -66.0534, Time 0.1396 sec
+Soure_domain_acc: 99.11, Target_domain_acc: 89.32
+Num-0, Epoch: 87 Loss_c: 0.0000, Loss_1: 0.0032, Loss_2: -70.3167, Time 0.1323 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.56
+Num-0, Epoch: 88 Loss_c: 0.0001, Loss_1: 0.0030, Loss_2: -64.9732, Time 0.1291 sec
+Soure_domain_acc: 99.78, Target_domain_acc: 91.76
+Num-0, Epoch: 89 Loss_c: 0.0000, Loss_1: 0.0024, Loss_2: -65.3052, Time 0.1240 sec
+Soure_domain_acc: 99.78, Target_domain_acc: 91.84
+Num-0, Epoch: 90 Loss_c: 0.0001, Loss_1: 0.0028, Loss_2: -72.0612, Time 0.1247 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 90.84
+Num-0, Epoch: 91 Loss_c: 0.0000, Loss_1: 0.0025, Loss_2: -78.2073, Time 0.1233 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.60
+Num-0, Epoch: 92 Loss_c: 0.0001, Loss_1: 0.0025, Loss_2: -75.5575, Time 0.1290 sec
+Soure_domain_acc: 99.55, Target_domain_acc: 91.84
+Num-0, Epoch: 93 Loss_c: 0.0001, Loss_1: 0.0025, Loss_2: -78.1551, Time 0.1285 sec
+Soure_domain_acc: 99.55, Target_domain_acc: 91.20
+Num-0, Epoch: 94 Loss_c: 0.0001, Loss_1: 0.0023, Loss_2: -76.5986, Time 0.1213 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 89.92
+Num-0, Epoch: 95 Loss_c: 0.0001, Loss_1: 0.0025, Loss_2: -85.1972, Time 0.1258 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 90.40
+Num-0, Epoch: 96 Loss_c: 0.0001, Loss_1: 0.0025, Loss_2: -86.3267, Time 0.1334 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 90.24
+Num-0, Epoch: 97 Loss_c: 0.0001, Loss_1: 0.0027, Loss_2: -88.9285, Time 0.1232 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 90.44
+Num-0, Epoch: 98 Loss_c: 0.0000, Loss_1: 0.0026, Loss_2: -88.0200, Time 0.1208 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 90.84
+Num-0, Epoch: 99 Loss_c: 0.0000, Loss_1: 0.0022, Loss_2: -83.1657, Time 0.1271 sec
+Soure_domain_acc: 99.33, Target_domain_acc: 91.52
+Average time per epoch: 131.40 ms
+Operation_0, Target test Loss: 0.0001, Acc: 93.6800, F1: 93.6039, Time: 0.0622 sec
+Operation_0, Source test Loss: 0.0003, Acc: 99.1071, F1: 99.1074, Time: 0.0185 sec
+Indicators:Ac_t Task:1200->1210-2400-2410-3600-3610 Mean_Var: [93.68, '93.680��0.000']
+Indicators:F1_t Task:1200->1210-2400-2410-3600-3610 Mean_Var: [93.6, '93.600��0.000']
