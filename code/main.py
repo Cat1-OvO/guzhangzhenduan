@@ -10,13 +10,13 @@ from utils.train_test import train_test
 def parse_args():
     parser = argparse.ArgumentParser(description='Train')
 
-    # default_dataset = "Bearing.BJTU"
+    #default_dataset = "Bearing.BJTU"
     default_dataset = "GearBox.BJUT"
 
 
     ''' ================= Data-related parameters ================= '''
     parser.add_argument('--dataset_name', type=str, default=default_dataset, help='name of dataset',  choices=["Bearing.BJTU", "GearBox.BJUT"])
-    parser.add_argument('--source_id', type=str, default='1200',     help='source domain')
+    parser.add_argument('--source_id', type=str, default='3000',     help='source domain')
     parser.add_argument('--data_ratio', type=int, default=0.5,help='percentage of dataset division')
     parser.add_argument('--miss_class', nargs='+', type=int, default=[],   help='deleting labels from a class')
     parser.add_argument('--FFT', type=bool, default=False,  help='whether to Fourier transform the data')
@@ -26,7 +26,11 @@ def parse_args():
     parser.add_argument('--batch_size', type=int, default=64, help='batch_size')
     parser.add_argument('--lr', type=float, default=0.01, help='the initial learning rate')
     parser.add_argument('--epoch', type=int, default=100, help='the max number of epoch')
-    parser.add_argument('--operation_num', type=int, default=1, help='the repeat operation of model')
+    parser.add_argument('--operation_num', type=int, default=3, help='the repeat operation of model')
+    ''' ================= Frequency Augmentation parameters ================= '''
+    parser.add_argument('--sigma', type=float, default=0.1, help='amplitude scaling strength for freq_aug')
+    parser.add_argument('--noise_std', type=float, default=0, help='noise injection strength (0 for GearBox, >0 for Bearing)')
+    parser.add_argument('--step_size', type=int, default=100, help='learning rate decay period (epochs)')
     args = parser.parse_args()
     return args
 

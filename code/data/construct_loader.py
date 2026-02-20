@@ -7,8 +7,8 @@ from scipy.fftpack import fft
 import numpy as np
 
 data_pth={
-          "GearBox.BJUT":r'c:\Users\86130\Desktop\DWCN-SDGFD-main\code\data\GearBox.BJUT\GearData',
-          "Bearing.BJTU":r'c:\Users\86130\Desktop\DWCN-SDGFD-main\code\data\Bearing.BJTU\BearingData',
+          "GearBox.BJUT":r'c:\Users\86130\Desktop\DWCN-SDGFD-main - 副本\code\data\GearBox.BJUT\GearData',
+          "Bearing.BJTU":r'c:\Users\86130\Desktop\DWCN-SDGFD-main - 副本\code\data\Bearing.BJTU\BearingData',
           }
 
 classes_map = {

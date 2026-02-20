@@ -17,7 +17,14 @@ class train_test(object):
         args = self.args
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.model_name=args.model_name
-        self.model =getattr(models,self.model_name)(in_channel=1,num_classes=n_class,lr=args.lr).to(self.device)
+        self.model = getattr(models, self.model_name)(
+            in_channel=1,
+            num_classes=n_class,
+            lr=args.lr,
+            sigma=args.sigma,
+            noise_std=args.noise_std,
+            step_size=args.step_size
+        ).to(self.device)
         self.criterion = nn.CrossEntropyLoss().to(self.device)
         return
 
