@@ -147,8 +147,8 @@ class Fea_Extraction_te(nn.Module):
         x10, x11, x1,_ = self.wave_func_1(input)
         x1 = self.conv1(x1)
         if perturb:
-            z11 = torch.randn(len(x1), self.zdim1).cuda()
-            z22 = torch.randn(len(x1), self.zdim1).cuda()
+            z11 = torch.randn(len(x1), self.zdim1, device=x1.device)
+            z22 = torch.randn(len(x1), self.zdim1, device=x1.device)
             x1, game, beat = self.dp(x1, z11, z22)
         self.l0 = x1
 
@@ -377,29 +377,42 @@ class DWCN(nn.Module):
     
     def freq_aug(self, x):
         """
-        频域幅度扰动 (Frequency Amplitude Jittering)
-        - 使用 self.sigma 控制幅度缩放范围
-        - 使用 self.noise_std 控制噪声强度 (为0时不注入噪声，适用于齿轮箱)
+        Frequency-domain augmentation based on smooth band-wise perturbation.
+        It changes the spectral envelope while keeping the phase and overall
+        signal energy stable, which is closer to realistic condition shifts.
         """
-        # 1. FFT
         fft_x = torch.fft.rfft(x, dim=-1)
         amp = torch.abs(fft_x)
         pha = torch.angle(fft_x)
-        
-        # 2. 幅度缩放 (模拟负载变化)
-        batch_size = x.size(0)
-        scale = (torch.rand(batch_size, 1, 1).to(x.device) - 0.5) * 2 * self.sigma + 1.0
-        amp = amp * scale
-        
-        # 3. 噪声注入 (可选，仅当 noise_std > 0 时启用)
+
+        batch_size, channels, freq_bins = amp.shape
+        knot_count = max(4, min(16, freq_bins // 8))
+
+        smooth_noise = torch.randn(batch_size * channels, 1, knot_count, device=x.device)
+        smooth_noise = F.interpolate(smooth_noise, size=freq_bins, mode='linear', align_corners=True)
+        smooth_noise = smooth_noise.view(batch_size, channels, freq_bins).tanh()
+
+        # A smooth spectral tilt complements the local band perturbation.
+        freq_axis = torch.linspace(-1.0, 1.0, freq_bins, device=x.device).view(1, 1, -1)
+        tilt = torch.randn(batch_size, channels, 1, device=x.device) * (0.5 * self.sigma)
+
+        band_mask = 1.0 + self.sigma * smooth_noise + tilt * freq_axis
+        band_mask = band_mask.clamp_min(0.2)
+        amp = amp * band_mask
+
         if self.noise_std > 0:
-            noise = torch.randn_like(amp).to(x.device) * self.noise_std * amp
+            noise = torch.randn_like(amp) * self.noise_std * amp
             amp = amp + noise
-        
-        # 4. 逆变换回时域
+
         aug_fft = amp * torch.exp(1j * pha)
         x_aug = torch.fft.irfft(aug_fft, n=x.shape[-1], dim=-1)
-        
+
+        # Keep the sample RMS close to the original so the augmentation focuses
+        # on domain-style changes rather than trivial energy scaling.
+        rms_x = x.pow(2).mean(dim=-1, keepdim=True).sqrt().clamp_min(1e-6)
+        rms_aug = x_aug.pow(2).mean(dim=-1, keepdim=True).sqrt().clamp_min(1e-6)
+        x_aug = x_aug * (rms_x / rms_aug)
+
         return x_aug
     
     def forward(self, SR_dataloader):
@@ -547,5 +560,4 @@ class DWCN(nn.Module):
             features = self.G_st(input)
             prediction = self.C_st(features)
         return prediction
-
 
