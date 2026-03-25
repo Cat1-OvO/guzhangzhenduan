@@ -1,0 +1,14 @@
+.tmp_pypdf/
+.tmp_pypdf2/
+.tmp_pypdf_extracted/
+.tmp_wheels/
+
+.vscode/
+
+__pycache__/
+*.py[cod]
+
+results/*.log
+results/**/*.log
+
+trained_models/
