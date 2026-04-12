@@ -48,7 +48,7 @@ class Fault_dataset(Dataset):
         self.task=get_domain_task(self.args.dataset_name)
         self.n_class=classes_map[self.args.dataset_name]-len(self.args.miss_class)
 
-    def load_data(self,path, temp, sum_class,data_ratio, mis_class, FFT=True, normalize_type="0-1"):
+    def load_data(self,path, temp, sum_class,data_ratio, mis_class, FFT=True, normalize_type="0-1", seed=None):
         data_temp = scio.loadmat(path)
         data = data_temp.get(temp)
         self.n_class = int(sum_class) - len(mis_class)
@@ -56,7 +56,13 @@ class Fault_dataset(Dataset):
             mis_class_id = np.argwhere(data[:, -1] == i_c)
             data = np.delete(data, mis_class_id, axis=0)
         class_sample, _ = data.shape
-        train_x, test_x, train_y, test_y = train_test_split(data[:, :1024], data[:, -1], test_size=data_ratio)
+        train_x, test_x, train_y, test_y = train_test_split(
+            data[:, :1024],
+            data[:, -1],
+            test_size=data_ratio,
+            shuffle=True,
+            random_state=seed,
+        )
         if FFT:
             train_x = np.abs(fft(train_x, axis=1))[:, :1024]
             test_x =np.abs(fft(test_x , axis=1))[:, :1024]
@@ -85,14 +91,23 @@ class Fault_dataset(Dataset):
         return seq
 
 
-    def Loader(self,data_list_name=[],train=False,miss_class=[]):
+    def Loader(self,data_list_name=[],train=False,miss_class=[], seed=None):
         train_loader_x = []
         test_loader_x = []
         for domain_id,domain in enumerate(data_list_name):
             sum_class = classes_map[self.args.dataset_name]
             root=data_pth[self.args.dataset_name]+"_"+str(domain)+"_"+str(sum_class)+".mat"
             temp= root.split('\\')[-1].split('.')[0]
-            train_x, train_y, test_x, test_y= self.load_data(root,temp, sum_class,self.args.data_ratio, miss_class, self.args.FFT, self.args.normalize_type)
+            train_x, train_y, test_x, test_y= self.load_data(
+                root,
+                temp,
+                sum_class,
+                self.args.data_ratio,
+                miss_class,
+                self.args.FFT,
+                self.args.normalize_type,
+                seed=seed,
+            )
             train_domain=torch.full_like(train_y,domain_id)
             train_dataset = Dataset_data(train_x, train_y,train_domain)
             test_domain=torch.full_like(test_y,domain_id)
@@ -114,6 +129,5 @@ class Fault_dataset(Dataset):
             a = str(source_name)
             task_mapping[a] = source_list_name
         return task_mapping
-
 
 

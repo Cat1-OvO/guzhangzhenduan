@@ -23,7 +23,9 @@ class train_test(object):
             lr=args.lr,
             sigma=args.sigma,
             noise_std=args.noise_std,
-            step_size=args.step_size
+            step_size=args.step_size,
+            use_contrastive_loss=bool(args.use_contrastive_loss),
+            alpha_contrastive=args.alpha_contrastive,
         ).to(self.device)
         self.criterion = nn.CrossEntropyLoss().to(self.device)
         return
