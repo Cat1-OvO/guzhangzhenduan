@@ -48,7 +48,7 @@ class Fault_dataset(Dataset):
         self.task=get_domain_task(self.args.dataset_name)
         self.n_class=classes_map[self.args.dataset_name]-len(self.args.miss_class)
 
-    def load_data(self,path, temp, sum_class,data_ratio, mis_class, FFT=True, normalize_type="0-1", seed=None):
+    def load_data(self,path, temp, sum_class,data_ratio, mis_class, FFT=True, normalize_type="0-1", split_seed=None):
         data_temp = scio.loadmat(path)
         data = data_temp.get(temp)
         self.n_class = int(sum_class) - len(mis_class)
@@ -60,8 +60,7 @@ class Fault_dataset(Dataset):
             data[:, :1024],
             data[:, -1],
             test_size=data_ratio,
-            shuffle=True,
-            random_state=seed,
+            random_state=split_seed
         )
         if FFT:
             train_x = np.abs(fft(train_x, axis=1))[:, :1024]
@@ -91,23 +90,15 @@ class Fault_dataset(Dataset):
         return seq
 
 
-    def Loader(self,data_list_name=[],train=False,miss_class=[], seed=None):
+    def Loader(self,data_list_name=[],train=False,miss_class=[], split_seed_base=None):
         train_loader_x = []
         test_loader_x = []
         for domain_id,domain in enumerate(data_list_name):
             sum_class = classes_map[self.args.dataset_name]
             root=data_pth[self.args.dataset_name]+"_"+str(domain)+"_"+str(sum_class)+".mat"
             temp= root.split('\\')[-1].split('.')[0]
-            train_x, train_y, test_x, test_y= self.load_data(
-                root,
-                temp,
-                sum_class,
-                self.args.data_ratio,
-                miss_class,
-                self.args.FFT,
-                self.args.normalize_type,
-                seed=seed,
-            )
+            split_seed = None if split_seed_base is None else split_seed_base + int(domain)
+            train_x, train_y, test_x, test_y= self.load_data(root,temp, sum_class,self.args.data_ratio, miss_class, self.args.FFT, self.args.normalize_type, split_seed=split_seed)
             train_domain=torch.full_like(train_y,domain_id)
             train_dataset = Dataset_data(train_x, train_y,train_domain)
             test_domain=torch.full_like(test_y,domain_id)
@@ -129,5 +120,3 @@ class Fault_dataset(Dataset):
             a = str(source_name)
             task_mapping[a] = source_list_name
         return task_mapping
-
-

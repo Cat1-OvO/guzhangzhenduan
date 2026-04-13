@@ -1,0 +1,422 @@
+[
+  {
+    "dataset": "Bearing.BJTU",
+    "journal_file": "a1.txt",
+    "journal_timestamp": "04-12 12:56:45",
+    "source_id": "1200",
+    "split_seed_base": "271828183",
+    "base_seed": "42",
+    "use_contrastive_loss": "0",
+    "method": "freq",
+    "task": "1200->1210-2400-2410-3600-3610",
+    "values": [
+      94.52,
+      93.84,
+      94.28,
+      94.44,
+      94.32
+    ],
+    "mean": 94.28,
+    "std": 0.2359660992600394,
+    "log_timestamp": "04-13 00:00:55"
+  },
+  {
+    "dataset": "Bearing.BJTU",
+    "journal_file": "a1.txt",
+    "journal_timestamp": "04-12 12:57:20",
+    "source_id": "1200",
+    "split_seed_base": "271828183",
+    "base_seed": "42",
+    "use_contrastive_loss": "1",
+    "method": "freq+loss",
+    "task": "1200->1210-2400-2410-3600-3610",
+    "values": [
+      94.08,
+      93.24,
+      93.92,
+      93.44,
+      93.92
+    ],
+    "mean": 93.72,
+    "std": 0.3219937887599717,
+    "log_timestamp": "04-13 00:04:08"
+  },
+  {
+    "dataset": "Bearing.BJTU",
+    "journal_file": "a2.txt",
+    "journal_timestamp": "04-12 13:00:16",
+    "source_id": "1210",
+    "split_seed_base": "271828183",
+    "base_seed": "42",
+    "use_contrastive_loss": "0",
+    "method": "freq",
+    "task": "1210->1200-2400-2410-3600-3610",
+    "values": [
+      94.92,
+      92.32,
+      93.0,
+      93.44,
+      94.92
+    ],
+    "mean": 93.72,
+    "std": 1.0427655537080258,
+    "log_timestamp": "04-13 00:07:50"
+  },
+  {
+    "dataset": "Bearing.BJTU",
+    "journal_file": "a2.txt",
+    "journal_timestamp": "04-12 13:01:57",
+    "source_id": "1210",
+    "split_seed_base": "314159265",
+    "base_seed": "42",
+    "use_contrastive_loss": "1",
+    "method": "freq+loss",
+    "task": "1210->1200-2400-2410-3600-3610",
+    "values": [
+      94.4,
+      94.48,
+      94.96,
+      93.68,
+      93.28
+    ],
+    "mean": 94.16,
+    "std": 0.6007994673765926,
+    "log_timestamp": "04-13 00:10:43"
+  },
+  {
+    "dataset": "Bearing.BJTU",
+    "journal_file": "a3.txt",
+    "journal_timestamp": "04-12 13:37:32",
+    "source_id": "2400",
+    "split_seed_base": "987654321",
+    "base_seed": "42",
+    "use_contrastive_loss": "0",
+    "method": "freq",
+    "task": "2400->1200-1210-2410-3600-3610",
+    "values": [
+      93.4,
+      92.84,
+      93.0,
+      93.08,
+      93.16
+    ],
+    "mean": 93.096,
+    "std": 0.18521339044464433,
+    "log_timestamp": "04-13 00:14:53"
+  },
+  {
+    "dataset": "Bearing.BJTU",
+    "journal_file": "a3.txt",
+    "journal_timestamp": "04-12 13:36:56",
+    "source_id": "2400",
+    "split_seed_base": "123456789",
+    "base_seed": "42",
+    "use_contrastive_loss": "1",
+    "method": "freq+loss",
+    "task": "2400->1200-1210-2410-3600-3610",
+    "values": [
+      94.84,
+      94.64,
+      94.32,
+      94.96,
+      95.28
+    ],
+    "mean": 94.80799999999999,
+    "std": 0.3203997503120144,
+    "log_timestamp": "04-13 00:17:26"
+  },
+  {
+    "dataset": "Bearing.BJTU",
+    "journal_file": "a4.txt",
+    "journal_timestamp": "04-12 13:08:21",
+    "source_id": "2410",
+    "split_seed_base": "314159265",
+    "base_seed": "42",
+    "use_contrastive_loss": "0",
+    "method": "freq",
+    "task": "2410->1200-1210-2400-3600-3610",
+    "values": [
+      77.4,
+      75.32,
+      76.96,
+      77.72,
+      78.84
+    ],
+    "mean": 77.248,
+    "std": 1.147212273295578,
+    "log_timestamp": "04-13 00:20:13"
+  },
+  {
+    "dataset": "Bearing.BJTU",
+    "journal_file": "a4.txt",
+    "journal_timestamp": "04-12 13:07:46",
+    "source_id": "2410",
+    "split_seed_base": "271828183",
+    "base_seed": "42",
+    "use_contrastive_loss": "1",
+    "method": "freq+loss",
+    "task": "2410->1200-1210-2400-3600-3610",
+    "values": [
+      79.12,
+      77.28,
+      78.36,
+      78.44,
+      79.32
+    ],
+    "mean": 78.50399999999999,
+    "std": 0.7167035649416001,
+    "log_timestamp": "04-13 00:22:37"
+  },
+  {
+    "dataset": "Bearing.BJTU",
+    "journal_file": "a5.txt",
+    "journal_timestamp": "04-12 13:10:39",
+    "source_id": "3600",
+    "split_seed_base": "271828183",
+    "base_seed": "42",
+    "use_contrastive_loss": "0",
+    "method": "freq",
+    "task": "3600->1200-1210-2400-2410-3610",
+    "values": [
+      94.4,
+      95.24,
+      95.56,
+      92.68,
+      93.52
+    ],
+    "mean": 94.28,
+    "std": 1.0688311372709893,
+    "log_timestamp": "04-13 00:25:23"
+  },
+  {
+    "dataset": "Bearing.BJTU",
+    "journal_file": "a5.txt",
+    "journal_timestamp": "04-12 13:12:17",
+    "source_id": "3600",
+    "split_seed_base": "314159265",
+    "base_seed": "42",
+    "use_contrastive_loss": "1",
+    "method": "freq+loss",
+    "task": "3600->1200-1210-2400-2410-3610",
+    "values": [
+      95.32,
+      94.44,
+      96.64,
+      94.52,
+      94.8
+    ],
+    "mean": 95.14399999999999,
+    "std": 0.8089894931332556,
+    "log_timestamp": "04-13 00:27:46"
+  },
+  {
+    "dataset": "Bearing.BJTU",
+    "journal_file": "a6.txt",
+    "journal_timestamp": "04-12 13:44:16",
+    "source_id": "3610",
+    "split_seed_base": "987654321",
+    "base_seed": "42",
+    "use_contrastive_loss": "0",
+    "method": "freq",
+    "task": "3610->1200-1210-2400-2410-3600",
+    "values": [
+      94.52,
+      93.96,
+      92.64,
+      93.24,
+      94.72
+    ],
+    "mean": 93.816,
+    "std": 0.7808098360036194,
+    "log_timestamp": "04-13 00:30:31"
+  },
+  {
+    "dataset": "Bearing.BJTU",
+    "journal_file": "a6.txt",
+    "journal_timestamp": "04-12 13:44:47",
+    "source_id": "3610",
+    "split_seed_base": "987654321",
+    "base_seed": "42",
+    "use_contrastive_loss": "1",
+    "method": "freq+loss",
+    "task": "3610->1200-1210-2400-2410-3600",
+    "values": [
+      94.12,
+      93.4,
+      94.36,
+      94.04,
+      93.52
+    ],
+    "mean": 93.888,
+    "std": 0.3669550381177511,
+    "log_timestamp": "04-13 00:32:55"
+  },
+  {
+    "dataset": "GearBox.BJUT",
+    "journal_file": "t1.txt",
+    "journal_timestamp": "04-12 13:19:24",
+    "source_id": "1200",
+    "split_seed_base": "314159265",
+    "base_seed": "42",
+    "use_contrastive_loss": "0",
+    "method": "freq",
+    "task": "1200->1800-2400-3000",
+    "values": [
+      87.12,
+      85.04,
+      86.12,
+      88.0,
+      87.46
+    ],
+    "mean": 86.748,
+    "std": 1.0511403331620348,
+    "log_timestamp": "04-13 00:35:42"
+  },
+  {
+    "dataset": "GearBox.BJUT",
+    "journal_file": "t1.txt",
+    "journal_timestamp": "04-12 13:20:08",
+    "source_id": "1200",
+    "split_seed_base": "314159265",
+    "base_seed": "42",
+    "use_contrastive_loss": "1",
+    "method": "freq+loss",
+    "task": "1200->1800-2400-3000",
+    "values": [
+      86.33,
+      87.58,
+      86.54,
+      86.62,
+      89.62
+    ],
+    "mean": 87.338,
+    "std": 1.2193834507651813,
+    "log_timestamp": "04-13 00:38:55"
+  },
+  {
+    "dataset": "GearBox.BJUT",
+    "journal_file": "t2.txt",
+    "journal_timestamp": "04-12 23:37:35",
+    "source_id": "1800",
+    "split_seed_base": "777777779",
+    "base_seed": "42",
+    "use_contrastive_loss": "0",
+    "method": "freq",
+    "task": "1800->1200-2400-3000",
+    "values": [
+      88.04,
+      90.54,
+      87.67,
+      89.5,
+      90.04
+    ],
+    "mean": 89.158,
+    "std": 1.1197213939190418,
+    "log_timestamp": "04-13 00:42:46"
+  },
+  {
+    "dataset": "GearBox.BJUT",
+    "journal_file": "t2.txt",
+    "journal_timestamp": "04-12 14:06:09",
+    "source_id": "1800",
+    "split_seed_base": "777777779",
+    "base_seed": "42",
+    "use_contrastive_loss": "1",
+    "method": "freq+loss",
+    "task": "1800->1200-2400-3000",
+    "values": [
+      92.46,
+      91.42,
+      90.33,
+      90.38,
+      90.58
+    ],
+    "mean": 91.03399999999999,
+    "std": 0.8138697684519304,
+    "log_timestamp": "04-13 00:46:00"
+  },
+  {
+    "dataset": "GearBox.BJUT",
+    "journal_file": "t3.txt",
+    "journal_timestamp": "04-12 13:27:07",
+    "source_id": "2400",
+    "split_seed_base": "271828183",
+    "base_seed": "42",
+    "use_contrastive_loss": "0",
+    "method": "freq",
+    "task": "2400->1200-1800-3000",
+    "values": [
+      92.75,
+      91.62,
+      92.75,
+      92.92,
+      93.5
+    ],
+    "mean": 92.708,
+    "std": 0.609832763960742,
+    "log_timestamp": "04-13 00:49:52"
+  },
+  {
+    "dataset": "GearBox.BJUT",
+    "journal_file": "t3.txt",
+    "journal_timestamp": "04-12 13:29:16",
+    "source_id": "2400",
+    "split_seed_base": "314159265",
+    "base_seed": "42",
+    "use_contrastive_loss": "1",
+    "method": "freq+loss",
+    "task": "2400->1200-1800-3000",
+    "values": [
+      93.29,
+      93.29,
+      93.92,
+      91.71,
+      93.21
+    ],
+    "mean": 93.084,
+    "std": 0.7331466429030449,
+    "log_timestamp": "04-13 00:53:05"
+  },
+  {
+    "dataset": "GearBox.BJUT",
+    "journal_file": "t4.txt",
+    "journal_timestamp": "04-12 13:31:31",
+    "source_id": "3000",
+    "split_seed_base": "271828183",
+    "base_seed": "42",
+    "use_contrastive_loss": "0",
+    "method": "freq",
+    "task": "3000->1200-1800-2400",
+    "values": [
+      90.92,
+      89.21,
+      90.42,
+      89.96,
+      90.92
+    ],
+    "mean": 90.286,
+    "std": 0.6458978247370124,
+    "log_timestamp": "04-13 00:56:58"
+  },
+  {
+    "dataset": "GearBox.BJUT",
+    "journal_file": "t4.txt",
+    "journal_timestamp": "04-12 13:30:43",
+    "source_id": "3000",
+    "split_seed_base": "429447631",
+    "base_seed": "42",
+    "use_contrastive_loss": "1",
+    "method": "freq+loss",
+    "task": "3000->1200-1800-2400",
+    "values": [
+      91.46,
+      90.29,
+      90.75,
+      91.25,
+      91.21
+    ],
+    "mean": 90.99199999999999,
+    "std": 0.4205900616990332,
+    "log_timestamp": "04-13 01:00:10"
+  }
+]
